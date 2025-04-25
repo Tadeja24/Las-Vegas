@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zemljevid Kazinojev</title>
+  <style>
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .map-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hover-area {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .laughlin-area {
+      top: 670px;
+      left: 342px;
+      width: 178px;
+      height: 100px;
+    }
+
+    .mesquite-area {
+      top: 440px;
+      left: 360px;
+      width: 170px;
+      height: 100px;
+    }
+
+    .casinos {
+      display: none;
+      position: absolute;
+      background: rgba(255,255,255,0.9);
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      font-family: Tahoma;
+      font-size: 20px;
+      line-height: 0.3;
+    }
+
+    .laughlin-casinos {
+      top: 520px;
+      left: 450px;
+      color: purple;
+      font-weight: 800;
+    }
+
+    .mesquite-casinos {
+      top: 350px;
+      left: 350px;
+      color: green;
+      font-weight: 800;
+    }
+
+    .laughlin-area:hover ~ .laughlin-casinos,
+    .mesquite-area:hover ~ .mesquite-casinos {
+      display: block;
+    }
+
+    /* Easter eggs - skriti, z različnimi stili */
+    .easter-egg {
+      position: absolute;
+      opacity: 0.13;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      font-style: italic;
+    }
+
+    .egg1 {
+      top: 700px;
+      left: 600px;
+      font-size: 14px;
+      font-family: 'Comic Sans MS', cursive;
+      transform: rotate(-5deg);
+      color: #444;
+    }
+
+    .egg2 {
+      top: 200px;
+      left: 500px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+      transform: rotate(7deg);
+      color: #666;
+    }
+
+    .egg3 {
+      top: 850px;
+      left: 270px;
+      font-size: 16px;
+      font-family: 'Georgia', serif;
+      transform: rotate(-10deg);
+      color: #555;
+    }
+
+    .egg4 {
+      top: 200px;
+      left: 100px;
+      font-size: 17px;
+      font-family: 'Trebuchet MS', sans-serif;
+      transform: rotate(4deg);
+      color: #777;
+    }
+
+    .egg5 {
+      top: 100px;
+      left: 500px;
+      font-size: 15px;
+      font-family: 'Arial Narrow', sans-serif;
+      transform: rotate(-6deg);
+      color: #888;
+    }
+
+    .egg6 {
+      top: 480px;
+      left: 60px;
+      font-size: 14px;
+      font-family: 'Verdana', sans-serif;
+      transform: rotate(8deg);
+      color: #666;
+    }
+
+    .egg7 {
+      top: 360px;
+      left: 100px;
+      font-size: 12px;
+      font-family: 'Lucida Console', monospace;
+      transform: rotate(-8deg);
+      color: #999;
+    }
+
+    .egg8 {
+      top: 500px;
+      left: 420px;
+      font-size: 13px;
+      font-family: 'Tahoma', sans-serif;
+      transform: rotate(5deg);
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="map-container">
+    <img src="LasVegas.png" alt="Zemljevid kazinojev">
+
+    <div class="hover-area laughlin-area"></div>
+    <div class="hover-area mesquite-area"></div>
+
+    <div class="casinos laughlin-casinos">
+      <p>Golden Nugget Laughlin</p>
+      <p>Harrah’s Laughlin</p>
+      <p>The New Pioneer</p>
+      <p>Aquarius</p>
+      <p>AVI</p>
+      <p>Tropicana Laughlin</p>
+      <p>Edgewater</p>
+    </div>
+
+    <div class="casinos mesquite-casinos">
+      <p>Eureka Mesquite</p>
+      <p>CasaBlanca</p>
+      <p>Virgin River</p>
+    </div>
+
+    <!-- Easter Egg fraze -->
+    <div class="easter-egg egg1">Made with a Lot of Skill™</div>
+    <div class="easter-egg egg2">Now You Can’t Say You Didn’t Know™</div>
+    <div class="easter-egg egg3">Read the Map, Save Us Both Some Time™</div>
+    <div class="easter-egg egg4">Crafted by One Brain and a Chatty Algorithm™</div>
+    <div class="easter-egg egg5">Made With Slightly Passive-Aggressive Love™</div>
+    <div class="easter-egg egg6">If You’re Lost, It’s Not My Fault™</div>
+    <div class="easter-egg egg7">No Casinos Were Harmed in the Making of This Map™</div>
+    <div class="easter-egg egg8">Because I’m Tired of Explaining This Over and Over Again™</div>
+  </div>
+</body>
+</html>
